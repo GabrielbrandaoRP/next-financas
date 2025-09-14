@@ -36,7 +36,7 @@ const ModalSaque: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
       
       <div
-        className="relative z-10 bg-white rounded-2xl shadow-lg w-96 p-6"
+        className="flex gap-2 py-7 relative z-10 bg-white rounded-2xl shadow-lg w-96 p-6 h-[120px]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -45,9 +45,11 @@ const ModalSaque: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         >
           ✕
         </button>
-
         <div>
-          <button className="bg-sky-700 w-full p-1 rounded-md text-white text-lg">
+          <input type="text" placeholder='Digite o valor:' className='p-2' />
+        </div>
+        <div>
+          <button className="bg-sky-700 w-full px-3 py-1 rounded-md text-white text-lg w-20">
             Sacar
           </button>
         </div>
