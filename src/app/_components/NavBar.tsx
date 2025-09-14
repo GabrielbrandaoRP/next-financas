@@ -11,13 +11,23 @@ export default function NavBar() {
         </h1>
       
         <ul className='flex gap-5'>
-          <li className=''>
-            <Link href="/ajuda"  className="hover:cursor-wait text-xl">
+          <li className='hover:bg-lime-400 hover:rounded-3xl hover:text-white p-1 px-2'>
+            <Link href="/"  className=" text-xl">
+              Inicio
+            </Link>
+          </li>
+          <li className='hover:bg-lime-400 hover:rounded-3xl hover:text-white p-1 px-2'>
+            <Link href="/ajuda"  className=" text-xl">
               Ajuda
             </Link>
           </li>
-          <li>
-            <Link href="/dashboard"  className="hover:cursor-wait text-xl">
+          <li className='hover:bg-lime-400 hover:rounded-3xl hover:text-white p-1 px-2'>
+            <Link href="/dashboard"  className=" text-xl">
+              Investimentos
+            </Link>
+          </li>
+          <li className='hover:bg-lime-400 hover:rounded-3xl hover:text-white p-1 px-2'>
+            <Link href="/extrato"  className=" text-xl">
               Ver extrato
             </Link>
           </li>

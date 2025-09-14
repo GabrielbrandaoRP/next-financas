@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
-import ModalContent from './ModalContent';
+
+import { useEffect } from 'react'
+
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
 }
-
-const ModalInvest: React.FC<ModalProps> = ({ isOpen, onClose, children }) => { 
+const ModalSaque: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -16,7 +16,6 @@ const ModalInvest: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   }, [isOpen]);
 
   if (!isOpen) return null;
-
   return (
     <div
       className="fixed inset-0 flex items-center justify-center z-50"
@@ -47,10 +46,13 @@ const ModalInvest: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           ✕
         </button>
 
-        <ModalContent/>
+        <div>
+          <button className="bg-sky-700 w-full p-1 rounded-md text-white text-lg">
+            Sacar
+          </button>
+        </div>
       </div>
     </div>
   )
-
 }
-export default ModalInvest
+export default ModalSaque
